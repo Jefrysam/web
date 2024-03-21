@@ -104,5 +104,8 @@ footer div a:hover{
         display: flex;
         justify-content: center;
     }
+    h3{
+        padding: 0.3em !important;
+    }
 
 }
