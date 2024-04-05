@@ -17,8 +17,7 @@
     transition: all 0.2s;    
 }
 .barra_nav{
-    float: right;        
-    /*display: inline-block;*/  /*i dont know why this isnt necesary but it works anyway*/
+    float: right;            
     font-size: 2em;
     padding: 1em;
     width: 50%;    
@@ -42,7 +41,6 @@ a:hover{
     display: flex;
 }
 .content p{
-    float: left;
     width: 100%;
     height: fit-content;
     font-size: 1.5em;
@@ -58,43 +56,52 @@ a:hover{
     height: auto;
     justify-content: center;    
 }
-
-footer{   
-    background-color: rgb(0, 0, 0);
-    height:26em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: medium;
+.taglist{
+    width: 50%;
+    position: absolute;
+    overflow: hidden;
+    padding-left: 30px;
 }
-footer h3{    
-    display: inline-block;    
-    font-size: 5em;
-    padding: 0.5em;
-    text-shadow: 2px 2px 2px rgb(255, 0, 0);
-    color:rgb(255, 255, 255);  
-    padding-top: 0em ; 
+.inner{
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    animation: loop 20s linear infinite;
+    caret-color: transparent;
 }
-footer p{
-    padding-left: 2em;
-    float: left;
-    font-size: 3em;   
-    text-shadow: 2px 2px 2px rgb(255, 238, 2);
-    color:rgb(255, 0, 0); 
-}
-footer div{
-    font-size: 2em;
-    float: right;
-    padding-right: 2em;
-} 
-footer div a{
-    color: rgb(255, 0, 0);
-    text-decoration: none;
-    padding: 2em;
-    border-radius: 45px;
-}
-footer div a:hover{
+.inner img{
+    padding-top: 20px;
+    width: 200px;
+    height: 200px;
+    max-width: none;
     
-    background-color: rgb(83, 44, 44);
 }
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    padding: 0;
+}
+.fade{
+    position: absolute;
+    background: linear-gradient(90deg, #e46515, transparent 10%, transparent 90.1%, rgb(246, 158, 22));
+    inset: 0;
+    pointer-events: none;    
+}
+@keyframes loop {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translate(0%);
+    }
+    
+}
+
+
 @media (max-width: 600px) {
     .content {
         display: inline-block;                    
@@ -109,6 +116,9 @@ footer div a:hover{
     }
     h3{
         padding: 0.3em !important;
+    }
+    .taglist{
+        display: none;
     }
 
 }
