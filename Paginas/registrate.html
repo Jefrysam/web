@@ -19,8 +19,20 @@
         </div>              
     </header>    
     <div class="content">
+        <!--TAREA CREAR EL OTRO FORMULARIO QUE IRA ANTES QUE ESTE.:-->
+        <div class="form-container" id="IniciarSesion">
+            <form>
+                <label for="username">Nombre de usuario:</label><br>
+                <input type="text" id="usernameUsser" name="username"><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="passwordUsser" name="password"><br>
+                <input type="submit" value="Entrar">
+                <br>
+                <input id = "solicitarRegistro" type="submit" value="Registarse">
+            </form>
+        </div>
         
-        <div class="form-container">
+        <div class="form-container" id="registrarse" style="display: none;">
                 <form>
                     <label for="username">Nombre de usuario:</label><br>
                     <input type="text" id="username" name="username"><br>
@@ -31,12 +43,12 @@
                     <input type="submit" value="Enviar">
                 </form>
         </div>
-        <!--TAREA CREAR EL OTRO FORMULARIO QUE IRA ANTES QUE ESTE.:-->
         
+    </div>
         
     </div> 
-    <footer>
-        
+    <footer>        
     </footer>
+    <script src="../Js/IniciarSecion.js"></script>
 </body>
 </html>
